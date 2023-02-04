@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { CartIcon, HeartItemIcon, OrderIcon } from "../Icons/Icons";
-import logo from './../../assets/logo.png'
+
+import Logo from "./Logo/Logo";
 
 const CartButton = () => {
   return (
@@ -12,19 +13,14 @@ const CartButton = () => {
 const Header = () => {
   return (
     <header className="header">
-      <div className="logo">
-        <img src={logo} alt="React Sneakers" width={40} height={40} />
-        <div>
-          <h1>React Sneakers</h1>
-          <p>Магазин лучших кроссовок</p>
-        </div>
-      </div>
+      <Logo />
+
       <nav>
         <CartButton />
         <NavLink to={"/favorites"}>
           <HeartItemIcon />
         </NavLink>
-        <NavLink to={"/favorites"}>
+        <NavLink to={"/orders"}>
           <OrderIcon />
         </NavLink>
       </nav>
