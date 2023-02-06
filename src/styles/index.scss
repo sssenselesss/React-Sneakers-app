@@ -165,7 +165,7 @@ main {
   .control {
     position: absolute;
     top: 50%;
-    
+
     left: 0;
     right: 0;
 
@@ -270,6 +270,10 @@ main {
   grid-auto-rows: max-content;
 
   gap: 40px;
+  .empty {
+    grid-column: 2/4;
+    text-align: center;
+  }
 }
 
 .product {
@@ -318,7 +322,7 @@ main {
       }
     }
 
-    button{
+    button {
       padding: 6px;
       border: 1px solid #f2f2f2;
       border-radius: 8px;
@@ -346,4 +350,30 @@ main {
 
     display: block;
   }
+}
+.overlay{
+
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.3);
+
+  z-index: 10;
+  &.active{
+    display: block;
+  }
+}
+
+.modal{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-rows: 0.25fr 4.75fr 1fr;
+
+  background-color: #fff;
+  padding: 32px;
+  
+  min-width: 25vw;
 }
